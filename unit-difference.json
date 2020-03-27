@@ -1,0 +1,27 @@
+{
+    "FahrenheitToRankine": "459.67",
+    "FahrenheitToCelcius": "32.0",
+    "FahrenheitToKelvin": "459.67",
+    "CelciusToKelvin":"273.15",
+    "CelciusToFahrenheit": "32.0",
+    "CelciusToRankine": "273.15",
+    "KelvinToFahrenheit": "459.67",
+    "KelvinToCelcius":"273.15",
+    "RankineToFahrenheit": "459.67",
+    "RankineToCelcius": "491.67",
+    "TablespoonToLiter":"0.0147868",
+    "TablespoonToCup":"0.0625",
+    "TablespoonToGallon":"0.00390625",
+    "CupToTablespoon":"16.0",
+    "CupToLiter":"0.2366",
+    "CupToGallon":"0.0625",
+    "GallonToTablespoon":"256.0",
+    "GallonToLiter":"3.7854",
+    "GallonToCup":"16.0",
+    "LiterToTablespoon":"0.2642",
+    "LiterToGallon":"0.2642",
+    "LiterToCup":"4.2268",
+    "CubicInchToCubicFeet": "0.000578704",
+    "CubicFeetToCubicInch": "1728.0"
+
+}
