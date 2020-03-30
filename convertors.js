@@ -4,24 +4,34 @@ const measurement = require('./unit-difference');
 module.exports =function (source, target, input){
     switch(source){
            case units["FAHRENHEIT"]:
+               //converting all cases where input unit is "FAHRENHEIT"
                 return convertValFromFahrenheit(target, input);
            case units["CELCIUS"]:
+               //converting all cases where input unit is "CELCIUS"
                 return convertValFromCelcius(target, input);
            case units["KELVIN"]:
+               //converting all cases where input unit is "KELVIN"
                 return convertValFromKelvin(target, input);
            case units["RANKINE"]:
+               //converting all cases where input unit is "RANKINE"
                 return convertValFromRankine(target, input);
            case units["TABLE_SPOON"]:
+               //converting all cases where input unit is "TABLE_SPOON"
                 return convertValFromTableSpoon(target, input);
            case units["CUP"]:
+               //converting all cases where input unit is "CUP"
                 return convertValFromCup(target, input);
            case units["LITER"]:
+               //converting all cases where input unit is "LITER"
                 return convertValFromLiter(target, input);
            case units["GALLON"]:
+               //converting all cases where input unit is "GALLON"
                 return convertValFromGallon(target, input);
             case units["CUBIC_INCH"]:
+                //converting all cases where input unit is "CUBIC_INCH"
                 return convertValFromCubicInch(target, input);
             case units["CUBIC_FEET"]:
+                //converting all cases where input unit is "CUBIC_FEET"
                 return convertValFromCubicFeet(target, input);        
       }
 }
@@ -32,10 +42,13 @@ const convertValFromFahrenheit = (target, input) =>{
         case units["FAHRENHEIT"]:
              return parseFloat(input);
         case units["CELCIUS"]:
+             //Formula to convert from "FAHRENHEIT" to "CELCIUS"
              return ((parseFloat(input) - parseFloat(measurement[`FahrenheitTo${target}`])) / 1.8);
         case units["KELVIN"]:
+             //Formula to convert from "FAHRENHEIT" to "KELVIN"
              return ((parseFloat(input) + parseFloat(measurement[`FahrenheitTo${target}`])) * (5.0/9.0));
         case units["RANKINE"]:
+             //Formula to convert from "FAHRENHEIT" to "RANKINE"
              return parseFloat(input) + parseFloat(measurement[`FahrenheitTo${target}`]);
    }
 }
@@ -46,10 +59,13 @@ const convertValFromCelcius = (target, input) =>{
         case units["CELCIUS"]:
              return parseFloat(input);
         case units["FAHRENHEIT"]:
+            //Formula to convert from "CELCIUS" to "FAHRENHEIT"
              return ((parseFloat(input) * (1.8)) + parseFloat(measurement[`CelciusTo${target}`]));
         case units["KELVIN"]:
+            //Formula to convert from "CELCIUS" to "FAHRENHEIT"
              return (parseFloat(input) + parseFloat(measurement[`CelciusTo${target}`]));
         case units["RANKINE"]:
+            //Formula to convert from "CELCIUS" to "FAHRENHEIT"
             return ((parseFloat(input) + parseFloat(measurement[`CelciusTo${target}`])) * (1.8));
    } 
 }
@@ -61,10 +77,13 @@ const convertValFromKelvin = (target, input) =>{
         case units["KELVIN"]:
              return parseFloat(input);
         case units["CELCIUS"]:
+            //Formula to convert from "KELVIN" to "CELCIUS"
              return (parseFloat(input) - parseFloat(measurement[`KelvinTo${target}`]));
         case units["FAHRENHEIT"]:
+            //Formula to convert from "KELVIN" to "FAHRENHEIT"
             return ((parseFloat(input) * (1.8)) - parseFloat(measurement[`KelvinTo${target}`]));
         case units["RANKINE"]:
+            //Formula to convert from "KELVIN" to "RANKINE"
              return (parseFloat(input) * (1.8));
    } 
 }
@@ -75,10 +94,13 @@ const convertValFromRankine = (target, input) =>{
         case units["RANKINE"]:
              return parseFloat(input);
         case units["CELCIUS"]:
+            //Formula to convert from "RANKINE" to "CELCIUS"
              return ((parseFloat(input) - parseFloat(measurement[`RankineTo${target}`])) * (5.0/9.0));
         case units["KELVIN"]:
+            //Formula to convert from "RANKINE" to "KELVIN"
              return (parseFloat(input) * (5.0/9.0));
         case units["FAHRENHEIT"]:
+            //Formula to convert from "RANKINE" to "FAHRENHEIT"
              return parseFloat(input) - parseFloat(measurement[`RankineTo${target}`]);
    }
 }
